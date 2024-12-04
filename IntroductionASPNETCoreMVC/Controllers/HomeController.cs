@@ -17,6 +17,10 @@ namespace IntroductionASPNETCoreMVC.Controllers
         {
             return View();
         }
+        public IActionResult Zmienne()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
