@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Formularz1";
+}
+
+<h1>Formularz1</h1>
+@* Tworzenie formularza zaczynamy od znacznika <form>, który powinien
+    mieć zdefiniowane dwa atrybuty: method, który może mieć wartość 
+    "post" albo "get" i action, czyli nazwę metody, gdzie będą wysłane
+    dane z formularza*@
+<form method="post" action="Formularz1Odczyt">
+    <label> Imię </label>
+    <input type="text" name="imie" />
+    <br />
+    <label> Nazwisko </label>
+    <input type="text" name="nazwisko" />
+    <br />
+    @* Aby formularz się wysłał, konieczny jest przycisk <input type="submit">.*@
+    <input type="submit" value="Wyślij"/>
+</form>

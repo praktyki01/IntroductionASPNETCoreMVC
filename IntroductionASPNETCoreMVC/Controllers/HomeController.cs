@@ -1,5 +1,6 @@
 using IntroductionASPNETCoreMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
 using System.Diagnostics;
 
 namespace IntroductionASPNETCoreMVC.Controllers
@@ -21,7 +22,54 @@ namespace IntroductionASPNETCoreMVC.Controllers
         {
             return View();
         }
+        public IActionResult Formularz1()
+        {
+            return View();
+        }
 
+        public IActionResult Formularz1Odczyt(string imie, string nazwisko )
+        {
+            ViewBag.imie = imie;
+            ViewBag.nazwisko = nazwisko;
+            return View();
+        }
+        public IActionResult Formularz2()
+        {
+            return View();
+        }
+        public IActionResult Formularz2Odczyt(string imie, string nazwisko,
+            string kraj, string fav_language)
+        {
+            ViewBag.imie = imie;
+            ViewBag.nazwisko = nazwisko;
+            if (kraj == "1") 
+            {
+                ViewBag.kraj = "Afganistan";
+            }
+            if (kraj == "2")
+            {
+                ViewBag.kraj = "Neuru";
+            }
+            if (kraj == "3")
+            {
+                ViewBag.kraj = "Burkina Faso";
+            }
+            if (kraj == "4")
+            {
+                ViewBag.kraj = "Czechy";
+            }
+            if (kraj == "5")
+            {
+                ViewBag.kraj = "Polska";
+            }
+            if (kraj == "6")
+            {
+                ViewBag.kraj = "UK";
+            }
+            ViewBag.fav_language = fav_language;
+
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

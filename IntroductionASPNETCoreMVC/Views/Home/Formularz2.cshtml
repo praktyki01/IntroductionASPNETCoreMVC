@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Formularz2";
+}
+
+<h1>Formularz2</h1>
+<form method="post" action="Formularz2Odczyt">
+    <label> Imię </label>
+    <input type="text" name="imie" />
+    <br />
+    <label> Nazwisko </label>
+    <input type="text" name="nazwisko" />
+    <br />
+    <label> Kraj </label>
+    <select name="kraj"> 
+        <option value="1"> Afganistan </option>
+        <option value="2"> Nauru </option>
+        <option value="3"> Burkina Faso </option>
+        <option value="4"> Czechy </option>
+        <option value="5"> Polska </option>
+        <option value="6"> UK </option>
+    </select>
+    <br />
+    <input type="radio" name="fav_language" value="HTML">
+    <label >HTML</label><br>
+    <input type="radio" name="fav_language" value="CSS">
+    <label > CSS </label><br>
+    <input type="radio" name="fav_language" value="JavaScript">
+    <label >JavaScript</label>
+    <br />
+    <input type="submit" value="Wyślij" />
+</form>
