@@ -70,6 +70,42 @@ namespace IntroductionASPNETCoreMVC.Controllers
 
             return View();
         }
+        public IActionResult Formularz3()
+        {
+            return View();
+        }
+        public IActionResult Formularz3Odczyt(UserFields daneUzytkownika)
+        {
+            ViewBag.imie = daneUzytkownika.Imie;
+            ViewBag.nazwisko = daneUzytkownika.Nazwisko;
+            if (daneUzytkownika.Kraj == "1")
+            {
+                ViewBag.kraj = "Afganistan";
+            }
+            if (daneUzytkownika.Kraj == "2")
+            {
+                ViewBag.kraj = "Neuru";
+            }
+            if (daneUzytkownika.Kraj    == "3")
+            {
+                ViewBag.kraj = "Burkina Faso";
+            }
+            if (daneUzytkownika.Kraj == "4")
+            {
+                ViewBag.kraj = "Czechy";
+            }
+            if (daneUzytkownika.Kraj == "5")
+            {
+                ViewBag.kraj = "Polska";
+            }
+            if (daneUzytkownika.Kraj == "6")
+            {
+                ViewBag.kraj = "UK";
+            }
+            ViewBag.fav_language = daneUzytkownika.Jezyk;
+
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

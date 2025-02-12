@@ -1,0 +1,41 @@
+﻿@model UserFields
+@{
+    ViewData["Title"] = "Formularz2";
+}
+
+<h1>Formularz2</h1>
+<form method="post" action="Formularz3Odczyt">
+    <label> Imię </label>
+    <input type="text" name="Imie" />
+    <span asp-validation-for="Imie" class="text-danger"></span>
+    <br />
+    <label> Nazwisko </label>
+    <input required type="text" name="Nazwisko" />
+    <span asp-validation-for="Nazwisko" class="text-danger"></span>
+    <br />
+    <label> Kraj </label>
+    <select name="Kraj"> 
+        <option value="1"> Afganistan </option>
+        <option value="2"> Nauru </option>
+        <option value="3"> Burkina Faso </option>
+        <option value="4"> Czechy </option>
+        <option value="5"> Polska </option>
+        <option value="6"> UK </option>
+    </select>
+    <span asp-validation-for="Kraj" class="text-danger"></span>
+    <br />
+    <input type="radio" name="Jezyk" value="HTML">
+    <label >HTML</label><br>
+    <input type="radio" name="Jezyk" value="CSS">
+    <label > CSS </label><br>
+    <input type="radio" name="Jezyk" value="JavaScript">
+    <label >JavaScript</label>
+    <br />
+    <input type="submit" value="Wyślij" />
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
