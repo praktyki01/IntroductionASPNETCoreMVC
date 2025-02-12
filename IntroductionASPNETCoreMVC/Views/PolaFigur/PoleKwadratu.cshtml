@@ -5,4 +5,17 @@
 
 <h1>PoleKwadratu</h1>
 
+<h4>Aby obliczyć pole kwadratu podaj bok</h4>
+<form method="post" action="PoleKwadratu">
+    <label>Bok</label>
+    <input type="text" name="bok"/><br/>
+    <input type="submit" value="Oblicz"/>
+
+</form>
+@if(@ViewBag.PoleKwadratu !=null)
+{
+    <h2>Pole kwadratu wynosi: @ViewBag.PoleKwadratu</h2>    
+}
+
+
 

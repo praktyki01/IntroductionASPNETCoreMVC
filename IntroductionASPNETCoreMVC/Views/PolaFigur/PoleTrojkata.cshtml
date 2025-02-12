@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "PoleTrójkąta";
+}
+
+<h1>Pole trójkąta</h1>
+
+<h4>Aby obliczyć pole trójkąta podaj bok oraz wysokość</h4>
+<form method="post" action="PoleTrojkata">
+    <label>Bok</label>
+    <input type="text" name="bok" /><br />
+    <label>Wysokość</label>
+    <input type="text" name="wysokosc" /><br />
+    <input type="submit" value="Oblicz" />
+
+</form>
+@if (@ViewBag.PoleTrojkata != null)
+{
+    <h2>Pole trójąta wynosi: @ViewBag.PoleTrojkata</h2>
+}
+
+
+
