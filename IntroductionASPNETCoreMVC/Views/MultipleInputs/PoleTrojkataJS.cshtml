@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "PoleTrojkataJS";
+}
+
+
+
+<h1>Pole trójkąta</h1>
+
+<label for="num1">Liczba 1:</label>
+<input type="number" id="num1">
+<br>
+<label for="num2">Liczba 2:</label>
+<input type="number" id="num2">
+<br>
+<button onclick="mnozenie()">Oblicz</button>
+<button onclick="usundiv()">Usuń div</button>
+<h3>Wynik: <span id="wynik"></span></h3>
+<div id="mojdiv"></div>
+<script>
+    function mnozenie() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+
+        document.getElementById("wynik").innerText = 0.5 * num1 * num2;
+
+        document.getElementById("mojdiv").innerHTML = "<input type='text'/>";
+    }
+    function usundiv() {
+        document.getElementById("mojdiv").remove();
+    }
+</script>
+
+
+
+
