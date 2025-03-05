@@ -8,6 +8,10 @@ namespace IntroductionASPNETCoreMVC.Controllers
         {
             return View();
         }
+        public IActionResult IndexOdczyt(string sklep, string[] produkt)
+        {
+            return View();
+        }
         public IActionResult Kalkulator()
         {
             return View();

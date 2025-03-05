@@ -4,18 +4,25 @@
 }
 
 <h1>Index</h1>
-<form>
+<form method="post" action="MultipleInputs/IndexOdczyt">
     <label>Nazwa sklepu</label>
     <input type="text" name="sklep"/><br/>
     <hr/>
-    <button onclick="funkcjajs()" type="button">+</button><br/>
-    <label>Produkt</label>
-    <input type="text" name="produkt"/><br/>
+    <button onclick="cloneProduct()" type="button">+</button><br/>
+    <div class="productToClone">
+        <label>Produkt</label>
+        <input type="text" name="produkt"/><br/>
+    </div>
+    <div id="newProducts">
+    </div>
+    <input type="submit" value="Wyślij"/>
 </form>
 
-<script>
-    function funkcjajs() {
-        alert('hej to jest funkcja');
+<script type="text/javascript">
+    function cloneProduct() {
+        var productToClone = document.querySelector('.productToClone');
+        var clonedProduct = productToClone.cloneNode(true);
+        document.getElementById('newProducts').appendChild(clonedProduct);
     }
 </script>
 
