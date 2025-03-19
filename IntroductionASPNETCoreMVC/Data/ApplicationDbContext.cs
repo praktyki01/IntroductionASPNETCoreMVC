@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using IntroductionASPNETCoreMVC.Models;
 
 namespace IntroductionASPNETCoreMVC.Data
 {
@@ -9,5 +10,6 @@ namespace IntroductionASPNETCoreMVC.Data
             : base(options)
         {
         }
+        public DbSet<IntroductionASPNETCoreMVC.Models.Samochod> Samochod { get; set; } = default!;
     }
 }
