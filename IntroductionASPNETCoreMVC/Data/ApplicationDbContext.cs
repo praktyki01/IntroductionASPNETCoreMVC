@@ -11,5 +11,7 @@ namespace IntroductionASPNETCoreMVC.Data
         {
         }
         public DbSet<IntroductionASPNETCoreMVC.Models.Samochod> Samochod { get; set; } = default!;
+        public DbSet<IntroductionASPNETCoreMVC.Models.Category> Category { get; set; } = default!;
+        public DbSet<IntroductionASPNETCoreMVC.Models.Product> Product { get; set; } = default!;
     }
 }
