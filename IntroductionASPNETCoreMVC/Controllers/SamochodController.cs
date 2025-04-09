@@ -24,6 +24,10 @@ namespace IntroductionASPNETCoreMVC.Controllers
         {
             return View(await _context.Samochod.ToListAsync());
         }
+        public async Task<IActionResult> IndexTylkoCzerwone()
+        {
+            return View(await _context.Samochod.Where(s=>s.Kolor=="czerwony").ToListAsync());
+        }
 
         // GET: Samochod/Details/5
         public async Task<IActionResult> Details(int? id)
