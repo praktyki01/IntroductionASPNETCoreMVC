@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Podaj link do produktu, adres url zdjęcia oraz nazwę produktu</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Link do produktu 1</label>
+                <input name="link1" class="form-control" />
+                <label class="control-label">Adres zdjęcia produktu 1</label>
+                <input name="zdjecie1" class="form-control" />
+                <label class="control-label">Nazwa produktu 1</label>
+                <input name="nazwa1" class="form-control" />
+            </div>
+            <hr/>
+            <div class="form-group">
+                <label class="control-label">Link do produktu 2</label>
+                <input name="link2" class="form-control" />
+                <label class="control-label">Adres zdjęcia produktu 2</label>
+                <input name="zdjecie2" class="form-control" />
+                <label class="control-label">Nazwa produktu 2</label>
+                <input name="nazwa2" class="form-control" />
+            </div>
+            <hr />
+            <div class="form-group">
+                <label class="control-label">Link do produktu 3</label>
+                <input name="link3" class="form-control" />
+                <label class="control-label">Adres zdjęcia produktu 3</label>
+                <input name="zdjecie3" class="form-control" />
+                <label class="control-label">Nazwa produktu 3</label>
+                <input name="nazwa3" class="form-control" />
+            </div>
+            <hr />
+            <div class="form-group">
+                <label class="control-label">Link do produktu 4</label>
+                <input name="link4" class="form-control" />
+                <label class="control-label">Adres zdjęcia produktu 4</label>
+                <input name="zdjecie4" class="form-control" />
+                <label class="control-label">Nazwa produktu 4</label>
+                <input name="nazwa4" class="form-control" />
+            </div>
+            <hr />
+            <input type="submit" value="Wyślij"/>
+        </form>
+    </div>
+</div>
+
+<textarea disabled style="width:100%; height:600px;">
+<div class="row">
+<div class="col-sm-3"><a href="@ViewBag.link1" title="@ViewBag.nazwa1"> <img src="@ViewBag.zdjecie1" alt="@ViewBag.nazwa1"> </a>
+<p style="text-align: center;"><a href="@ViewBag.link1" title="@ViewBag.nazwa1">@ViewBag.nazwa1</a></p>
+</div>
+
+<div class="col-sm-3"><a href="@ViewBag.link2" title="@ViewBag.nazwa2"> <img src="@ViewBag.zdjecie2" alt="@ViewBag.nazwa2"> </a>
+<p style="text-align: center;"><a href="@ViewBag.link2" title="@ViewBag.nazwa2">@ViewBag.nazwa2</a></p>
+</div>
+
+<div class="col-sm-3"><a href="@ViewBag.link3" title="@ViewBag.nazwa3"> <img src="@ViewBag.zdjecie3" alt="@ViewBag.nazwa3"> </a>
+<p style="text-align: center;"><a href="@ViewBag.link3" title="@ViewBag.nazwa3">@ViewBag.nazwa3</a></p>
+</div>
+<div class="col-sm-3"><a href="@ViewBag.link4" title="@ViewBag.nazwa4"> <img src="@ViewBag.zdjecie4" alt="@ViewBag.nazwa4"> </a>
+<p style="text-align: center;"><a href="@ViewBag.link4" title="@ViewBag.nazwa4">@ViewBag.nazwa4</a></p>
+</div> 
+
+</div>
+</textarea>
+
